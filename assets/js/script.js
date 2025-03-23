@@ -84,7 +84,7 @@ async function convertirMoneda(valor) {
   const codigoMoneda = selectMoneda.value;
   const arrayMoneda = await getMonedas(codigoMoneda);
   const valorConvertir = arrayMoneda.serie[0].valor;
-  const resultadoConversion = valor * valorConvertir;
+  const resultadoConversion = valor / valorConvertir;
 
   resultado.textContent = `Resultado: ${resultadoConversion.toFixed(2)}`;
   renderGrafica(codigoMoneda);
